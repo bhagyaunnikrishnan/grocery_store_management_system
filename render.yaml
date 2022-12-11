@@ -1,0 +1,17 @@
+services:
+- type: web
+  name: sms_django
+  env: python
+  plan: starter
+  buildCommand: ./build.sh
+  startCommand: gunicorn sms_django.wsgi:application
+  autoDeploy: false
+  envVars:
+    - key: WEB_CONCURRENCY
+      value: 4
+    - key: DJANGO_SECRET_KEY
+      generateValue: true
+    - key: DJANGO_ADMIN_URL
+      generateValue: true
+    - key: DJANGO_SETTINGS_MODULE
+      value: sms_django.settings
