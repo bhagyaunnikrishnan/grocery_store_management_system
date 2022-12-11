@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-rehm$-g0&_c-nzb54b7xp-pcnehad63vd4b-4zlwh=o839g1f@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sms-django.onrender.com']
 
 
 # Application definition
